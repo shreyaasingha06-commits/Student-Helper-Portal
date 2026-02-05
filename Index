@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Student Helper Portal</title>
+</head>
+<style>
+:root {
+  --bg-main: #f6f3ee;        /* soft cream */
+  --bg-card: #ffffff;       /* clean white */
+  --sage: #9caf88;          /* muted green */
+  --sage-dark: #6f7f63;     /* darker green */
+  --beige: #e7ddcf;         /* warm beige */
+  --text-main: #3b3b3b;     /* soft dark gray */
+  --accent: #c8a27a;        /* warm accent */
+  --text-light: #6b6b6b;
+}
+
+   * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+body{
+    background-color: var(--beige);
+    overflow-x: hidden;
+    
+}
+
+.hero {
+    height: 100vh;
+    align-items: center;
+    padding: 0.5%;
+    background-attachment: fixed;
+    background:  url('https://i.pinimg.com/1200x/92/f9/30/92f930f214de96307cf9fe8f5786fc70.jpg') repeat center center/cover;
+    background-repeat: repeat;
+    background-position: center center;
+    background-size: cover;
+    position: relative;
+    color: var(--sage-dark);
+}
+
+.navbar {
+    position: relative;
+    z-index: 10;
+    display: flex;
+    justify-content: space-between;
+    padding: 30px 80px;
+  animation: slideDown 0.8s ease-out;
+}
+
+@keyframes slideDown {
+  from {
+    transform: translateY(-20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+.logo {
+    font-weight: bold;
+    letter-spacing: 2px;
+    font-size:100px ;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: var(--sage-dark);
+}
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 18px;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 600px;
+    padding: 120px 80px;
+}
+
+.hero-content h2 {
+    color: var(--accent);
+    font-size: 38px;
+    letter-spacing: 4px;
+    margin: 10px;
+}
+
+.hero-content h1 {
+    font-size: 100px;
+    margin: 10px ;
+    color: var(--sage-dark);
+}
+
+.hero-content p {
+    font-size: 20px;
+    margin: 20px 0;
+    line-height: 1.6;
+    color: black;
+}
+
+.hero-content button {
+    padding: 20px 35px;
+    font-size: 20px;
+    border: none;
+    background: var(--sage);
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+    border-radius: 30px;
+}
+
+.hero-content button:hover {
+    background: var(--sage-dark);
+} 
+</style>
+<body>
+ <nav class="navbar">
+    <div class="nav-logo">🌿 Student Helper</div>
+
+    <ul class="nav-links">
+      <li><a href="dashboard.html">Dashboard</a></li>
+    </ul>
+  </nav>
+    <section class="hero">
+        <div class="overlay"></div>
+
+        <nav class="navbar">
+            <h1 class="logo">STUDENT HELPER</h1>
+            <ul class="nav-links">
+                <li>Features</li>
+                <li><a href="login.html">Login</a></li>
+                <li>Profile</li>
+            </ul>
+        </nav>
+
+        <div class="hero-content">
+            <h2>STUDY SMART</h2>
+            <h1>NOT HARD</h1>
+            <p>Your one-stop portal for notes, schedules, reminders & academic support.</p>
+            <button><a href="login.html">Explore Portal</a></button>
+        </div>
+    </section>
+
+</body>
+</html>
