@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Student Helper Portal</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <h2 class="logo">🌿Student Helper Portal</h2>
+    <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+    </ul>
+  </nav>
+
+  <!-- DASHBOARD -->
+  <main class="dashboard">
+    <header class="dash-header">
+        <h1>Welcome👋</h1>
+    </header>
+
+    <!-- SUMMARY CARDS -->
+    <section class="summary">
+      <div class="card today-card">
+        <h2>📅 Today's Timetable</h2>
+        <div class="add-period">
+  <select id="daySelect">
+    <option>Monday</option>
+    <option>Tuesday</option>
+    <option>Wednesday</option>
+    <option>Thursday</option>
+    <option>Friday</option>
+    <option>Saturday</option>
+  </select>
+
+  <input type="text" id="timeInput" placeholder="9:00 – 9:50">
+  <input type="text" id="subjectInput" placeholder="Subject">
+
+</div>
+        <div id="todayTimetable"></div>
+      </div>
+
+      <div class="card">
+        <h2>⏰Remainders</h2>
+        <div id="reminders"></div>
+      </div>
+
+      <div class="card">
+        <h2>📝 Recent Notes</h2>
+        <div id="recentNotes"></div>
+      </div>
+      
+    </section>
+
+    <!--SCROLL BOX SECTION-->
+    <section class="sections">
+
+     <!--RIGHT SIDE-->
+     <div class="right-column">
+
+      <!-- NOTES -->
+      <div class="card">
+        <h3>📝 Notes</h3>
+        <div class="scroll-box">
+          <input type="text" id="noteTitle" placeholder="Note title">
+          <textarea id="noteContent" placeholder="Write note..."></textarea>
+          <button onclick="addNote()">Add Note</button>
+          <div id="notesList"></div>
+        </div>
+      </div>
+
+      <!-- LINKS -->
+      <div class="card">
+        <p>🔗 Useful Links</p>
+        <div class="scroll-box" id="links-grid">
+    <li><a href="https://drive.google.com" target="_blank" class="link-card">
+      <h3>Google Drive</h3>
+      <p>Notes</p>
+    </a></li>
+
+    <li><a href="https://youtube.com" target="_blank" class="link-card">
+      <h3>YouTube</h3>
+      <p>Lectures</p>
+    </a> </li>
+        </div>
+      </div>
+     </div>
+
+     <!-- COLLAPSIBLE SECTIONS -->
+
+     <!--LEFT SIDE-->
+     <div class="left-column">
+      <!-- TIMETABLE -->
+      <div class="card timetable">
+        <button class="toggle-btn">📅 Full Timetable</button>
+        <div class="content" id="timetableSection"></div>
+      </div>
+     </div>
+
+    </section>
+
+  </main>
+</body>
+</html>
