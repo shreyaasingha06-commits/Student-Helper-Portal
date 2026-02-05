@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Login | Student Helper</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<style>
+:root {
+  --bg-main: #f6f3ee;        /* soft cream */
+  --bg-card: #ffffff;       /* clean white */
+  --sage: #9caf88;          /* muted green */
+  --sage-dark: #6f7f63;     /* darker green */
+  --beige: #e7ddcf;         /* warm beige */
+  --text-main: #3b3b3b;     /* soft dark gray */
+  --accent: #c8a27a;        /* warm accent */
+  --text-light: #6b6b6b;
+}
+
+body{
+    animation: fadeIn 0.8s ease-in-out;
+}
+@keyframes fadeIn{
+    from{opacity: 0;}
+    to{opacity: 1;}
+}
+    /* ===== AUTH / LOGIN PAGE ===== */
+
+.auth-body {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: url('https://i.pinimg.com/1200x/a1/30/bd/a130bd4a655a6cb69dce85e0fccb8613.jpg') center/cover no-repeat;
+}
+.auth-body{
+    min-height: calc(100hv - 80px);
+}
+.auth-card {
+  background: var(--bg-card);
+  padding: 40px 30px;
+  border-radius: 30px;
+  width: 100%;
+  max-width: 360px;
+  text-align: center;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease,
+  box-shadow 0.3s ease;
+  animation: floatUp 0.9s ease-out;
+}
+@keyframes floatUp{
+    from{
+        transform: translateY(25px);
+        opacity: 0;
+    }
+    to{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.auth-card h1 {
+  color: var(--sage-dark);
+  margin-bottom: 8px;
+}
+
+.auth-card p {
+  color: var(--text-light);
+  margin-bottom: 25px;
+}
+
+.auth-card input {
+  width: 95%;
+  padding: 14px 16px;
+  margin-bottom: 15px;
+  border-radius: 20px;
+  border: 1px solid var(--beige);
+  font-size: 15px;
+}
+
+.auth-card input:focus {
+  outline: none;
+  border-color: var(--sage);
+}
+
+.auth-card button {
+  width: 100%;
+  padding: 24px;
+  border-radius: 30px;
+  background: var(--sage);
+  color: white;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+.auth-card button:hover {
+  background: var(--sage-dark);
+}
+
+.auth-note {
+  display: block;
+  margin-top: 15px;
+  font-size: 12px;
+  color: var(--text-light);
+}
+/* ===== NAVBAR ===== */
+
+.navbar {
+  width: 98%;
+  background: var(--bg-card);
+  padding: 14px 22px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 0 0 24px 24px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.05);
+  animation: slideDown 0.8s ease-out;
+}
+@keyframes slideDown{
+    from{
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+    to{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.nav-logo {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--sage-dark);
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 18px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: var(--text-main);
+  font-size: 14px;
+  padding: 8px 14px;
+  border-radius: 20px;
+  transition: all 0.3s ease;
+}
+
+.nav-links a:hover {
+  background: var(--sage);
+  color: white;
+}
+</style>
+<body>
+<nav class="navbar">
+  <div class="nav-logo">🌿 Student Helper</div>
+   
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+  </ul>
+</nav>
+    <div class="auth-body">
+  <div class="auth-card">
+    <h1>Welcome Back 🌿</h1>
+    <p>Please login to continue</p>
+
+    <form>
+      <input type="email" placeholder="College Email" required>
+      <input type="password" placeholder="Password" required>
+
+      <button type="submit">Login</button>
+    </form>
+
+    <span class="auth-note">*Demo login (no backend)</span>
+  </div>
+</div>
+</body>
+</html>
